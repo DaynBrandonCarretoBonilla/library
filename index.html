@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>APLICACIÓN LIBRERIA</title>
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/Chemistry.css"/>
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js" type="text/javascript"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div data-role="page" id="Principal" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>LIBRERIA</h1>
+</div>
+
+<div>
+
+<ul data-role="listview" data-theme="b" class="ui-listview ui-group-theme-b">
+<li class="ui-first-child ui-last-child">
+<a href="#" id="boton1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Consulta TODOS</h2>
+<p>Muestra la información de todos los libros que se encuentran en la BD</p>
+</a>
+</li>
+
+<li class="ui-first-child ui-last-child">
+<a href="#pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Consulta LIBRO-AUTOR</h2>
+<p>Elige entrela opcion buscar por nombre o autor del libro</p>
+</a>
+</li>
+
+</ul>
+</div>
+
+<div data-role="footer" align="center" data-theme="a">
+</div>
+</div>
+
+<!-- consulta TODOS -->
+<div data-role="page" id="pagina1"  data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>LIBROS</h1>
+</div>
+<div data-role="main" class="ui-content">
+ <div id="informacion">
+ </div>
+</div>
+<div data-role="footer" data-theme="a" align="center">
+</div>
+</div>
+</div>
+<!-- fin consulta TODOS -->
+
+<!-- consulta LIBRO-AUTOR -->
+<div data-role="page" id="pagina2" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h2>Selecciona la opción para realizar una búsqueda:</h2>
+</div>
+<div data-role="main" class="ui-content">
+<a href="#libros" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Nombre del Libro</a>
+<a href="#autor" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Autor</a>
+</div>
+<div data-role="footer" data-theme="a" align="center">
+</div>
+</div>
+</div>
+<!-- fin consulta LIBRO-AUTOR-->
+
+<!-- mostrar LIBRO -->
+<div data-role="page" id="libros" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>NOMBRE DE LIBROS</h1>
+</div>
+<div data-role="main" class="ui-content">
+<h3>Ingresa el nombre del libro que deseas buscar:</h3>
+<input id="txttitulo" type="text" >
+<a href="#" id="btn_libro" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Buscar Libro</a>
+ <div id="informacionlibro">
+ </div>
+</div>
+<div data-role="footer" data-theme="a" align="center">
+</div>
+</div>
+</div>
+<!-- fin  mostrar LIBRO-->
+
+<!-- mostrar AUTOR -->
+<div data-role="page" id="autor" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>AUTORES</h1>
+</div>
+<div data-role="main" class="ui-content">
+<h3>Introduce el nombre del autor que deseas buscar:</h3>
+<input id="txtautor" type="text">
+<a href="#" id="btn_autor" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Buscar Autor</a>
+ <div id="informacionautor">
+ </div>
+</div>
+<div data-role="footer" data-theme="a" align="center">
+</div>
+</div>
+<!-- fin  mostrar AUTOR-->
+
+</body>
+</html>
